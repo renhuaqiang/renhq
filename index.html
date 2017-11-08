@@ -91,10 +91,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Unix的相关背景"><a href="#Unix的相关背景" class="headerlink" title="Unix的相关背景"></a>Unix的相关背景</h2><p>1、Unix1970年诞生，由贝尔实验室研发</p>
-<p>##入门<br>1、who 查看用户登录系统的用户<br>2、who | wc 计算登录的用户数，‘|’ 符号为<strong>管道</strong>符号，可以在命令之间建立管道</p>
-<h2 id="开发周期"><a href="#开发周期" class="headerlink" title="开发周期"></a>开发周期</h2><pre><code>先在命令行上测试，一旦能够书写能够完成工作的适当语法，可以用cat &gt; 写入到文本中并赋予执行权限，形成脚本文件供后面使用
-</code></pre><h2 id="开头第一行"><a href="#开头第一行" class="headerlink" title="开头第一行"></a>开头第一行</h2><p>‘#！‘ 供内核扫描 使用何种解释器执行程序，还可以跟上参数<br>1、#!  /bin/awk -f<br>2、#! /bin/sh</p>
+        <p>[toc]</p>
+<h2 id="Unix的相关背景"><a href="#Unix的相关背景" class="headerlink" title="Unix的相关背景"></a>Unix的相关背景</h2><hr>
+<pre><code>Unix1970年诞生，由贝尔实验室研发
+</code></pre><hr>
+<h2 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h2><p>1、who 查看用户登录系统的用户<br>2、who | wc 计算登录的用户数，‘|’ 符号为<strong>管道</strong>符号，可以在命令之间建立管道</p>
+<h2 id="开发周期"><a href="#开发周期" class="headerlink" title="开发周期"></a>开发周期</h2><p>1、先在命令行上测试，一旦能够书写能够完成工作的适当语法，可以用cat &gt; 写入到文本中并赋予执行权限，形成脚本文件供后面使用</p>
+<h2 id="开头第一行"><a href="#开头第一行" class="headerlink" title="开头第一行"></a>开头第一行</h2><p>‘#！‘ 供内核扫描 使用何种解释器执行程序，还可以跟上参数<br>1、#!  /bin/awk -f<br>2、#! /bin/sh</p>
 <h2 id="shell-命令与参数"><a href="#shell-命令与参数" class="headerlink" title="shell 命令与参数"></a>shell 命令与参数</h2><p>1、 命令 【选项option】 【额外参数argument】<br>2、长选项，一般有两个’–‘来标识 选项结束，后面跟的被视为 参数<br>3、’；‘来分割一行中的多条语句。<br>4、<strong>shell会在$PATH变量中查找命令</strong></p>
 <h2 id="shell能够识别的三种命令"><a href="#shell能够识别的三种命令" class="headerlink" title="shell能够识别的三种命令"></a>shell能够识别的三种命令</h2><p>1、内建命令：cd<br>2、shell函数<br>3、外部命令：shell 的副本（新的进程）所执行的命令</p>
 <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>1、变量赋值： 变量名=值，’=‘ 两边不包含<strong>空格</strong><br>2、赋的值带有空格时，要使用引号 fullname=“isaac bashevis singer”</p>
