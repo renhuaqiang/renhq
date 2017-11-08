@@ -93,15 +93,14 @@
       
         <p>##Unix的相关背景<br>1、Unix1970年诞生，由贝尔实验室研发</p>
 <p>##入门<br>1、who 查看用户登录系统的用户<br>2、who | wc 计算登录的用户数，‘|’ 符号为<strong>管道</strong>符号，可以在命令之间建立管道</p>
-<h2 id="开发周期"><a href="#开发周期" class="headerlink" title="开发周期"></a>开发周期</h2><blockquote>
-<p>先在命令行上测试，一旦能够书写能够完成工作的适当语法，可以用cat &gt; 写入到文本中并赋予执行权限，形成脚本文件供后面使用</p>
+<h2 id="开发周期"><a href="#开发周期" class="headerlink" title="开发周期"></a>开发周期</h2><p> 先在命令行上测试，一旦能够书写能够完成工作的适当语法，可以用cat &gt; 写入到文本中并赋予执行权限，形成脚本文件供后面使用</p>
 <h2 id="开头第一行"><a href="#开头第一行" class="headerlink" title="开头第一行"></a>开头第一行</h2><p>‘#！‘ 供内核扫描 使用何种解释器执行程序，还可以跟上参数<br>1、#!  /bin/awk -f<br>2、#! /bin/sh</p>
-</blockquote>
 <p>##shell 命令与参数<br>1、 命令 【选项option】 【额外参数argument】<br>2、长选项，一般有两个’–‘来标识 选项结束，后面跟的被视为 参数<br>3、’；‘来分割一行中的多条语句。<br>4、<strong>shell会在$PATH变量中查找命令</strong></p>
 <h2 id="shell能够识别的三种命令"><a href="#shell能够识别的三种命令" class="headerlink" title="shell能够识别的三种命令"></a>shell能够识别的三种命令</h2><p>1、内建命令：cd<br>2、shell函数<br>3、外部命令：shell 的副本（新的进程）所执行的命令</p>
 <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>1、变量赋值： 变量名=值，’=‘ 两边不包含<strong>空格</strong><br>2、赋的值带有空格时，要使用引号 fullname=“isaac bashevis singer”</p>
 <h2 id="基本的I-O-重定向"><a href="#基本的I-O-重定向" class="headerlink" title="基本的I/O 重定向"></a>基本的I/O 重定向</h2><p>1、默认的标准输入、输出、错误输出  都是终端<br>2、&lt; 改变标准输入 ， &gt; 改变标准输出 ， &gt;&gt; 附加到文件<br>3、<strong>program1 | program2</strong> ,’|’ 管道将program1的输出 修改为 program2 的输入</p>
-<h2 id="国际化"><a href="#国际化" class="headerlink" title="国际化"></a>国际化</h2><p>1、控制哪种环境与语言生效的命令为 locale<br>2、locale -a #列出locale的名称<br>3、指定LC_ALL情况下查询，某一参数的值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">[root@migu78 ~]# LC_ALL=en_US.UTF-8 locale -ck LC_TIME</div><div class="line">LC_TIME</div><div class="line">abday=&quot;Sun;Mon;Tue;Wed;Thu;Fri;Sat&quot;</div><div class="line">day=&quot;Sunday;Monday;Tuesday;Wednesday;Thursday;Friday;Saturday&quot;</div><div class="line">abmon=&quot;Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec&quot;</div><div class="line">mon=&quot;January;February;March;April;May;June;July;August;September;October;November;December&quot;</div><div class="line">am_pm=&quot;AM;PM&quot;</div><div class="line">d_t_fmt=&quot;%a %d %b %Y %r %Z&quot;</div><div class="line">d_fmt=&quot;%m/%d/%Y&quot;</div><div class="line">t_fmt=&quot;%r&quot;</div><div class="line">t_fmt_ampm=&quot;%I:%M:%S %p&quot;</div><div class="line">era=</div><div class="line">era_year=&quot;&quot;</div><div class="line">era_d_fmt=&quot;&quot;</div><div class="line">alt_digits=</div><div class="line">era_d_t_fmt=&quot;&quot;</div><div class="line">era_t_fmt=&quot;&quot;</div><div class="line">time-era-num-entries=0</div><div class="line">time-era-entries=&quot;S&quot;</div><div class="line">week-ndays=7</div><div class="line">week-1stday=19971130</div><div class="line">week-1stweek=7</div><div class="line">first_weekday=1</div><div class="line">first_workday=2</div><div class="line">cal_direction=1</div><div class="line">timezone=&quot;&quot;</div><div class="line">date_fmt=&quot;%a %b %e %H:%M:%S %Z %Y&quot;</div><div class="line">time-codeset=&quot;UTF-8&quot;</div></pre></td></tr></table></figure></p>
+<h2 id="国际化"><a href="#国际化" class="headerlink" title="国际化"></a>国际化</h2><p>1、控制哪种环境与语言生效的命令为 locale<br>2、locale -a #列出locale的名称<br>3、指定LC_ALL情况下查询，某一参数的值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">[root@migu78 ~]<span class="comment"># LC_ALL=en_US.UTF-8 locale -ck LC_TIME</span></div><div class="line">LC_TIME</div><div class="line">abday=<span class="string">"Sun;Mon;Tue;Wed;Thu;Fri;Sat"</span></div><div class="line">day=<span class="string">"Sunday;Monday;Tuesday;Wednesday;Thursday;Friday;Saturday"</span></div><div class="line">abmon=<span class="string">"Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec"</span></div><div class="line">mon=<span class="string">"January;February;March;April;May;June;July;August;September;October;November;December"</span></div><div class="line">am_pm=<span class="string">"AM;PM"</span></div><div class="line">d_t_fmt=<span class="string">"%a %d %b %Y %r %Z"</span></div><div class="line">d_fmt=<span class="string">"%m/%d/%Y"</span></div><div class="line">t_fmt=<span class="string">"%r"</span></div><div class="line">t_fmt_ampm=<span class="string">"%I:%M:%S %p"</span></div><div class="line">era=</div><div class="line">era_year=<span class="string">""</span></div><div class="line">era_d_fmt=<span class="string">""</span></div><div class="line">alt_digits=</div><div class="line">era_d_t_fmt=<span class="string">""</span></div><div class="line">era_t_fmt=<span class="string">""</span></div><div class="line">time-era-num-entries=0</div><div class="line">time-era-entries=<span class="string">"S"</span></div><div class="line">week-ndays=7</div><div class="line">week-1stday=19971130</div><div class="line">week-1stweek=7</div><div class="line">first_weekday=1</div><div class="line">first_workday=2</div><div class="line">cal_direction=1</div><div class="line">timezone=<span class="string">""</span></div><div class="line">date_fmt=<span class="string">"%a %b %e %H:%M:%S %Z %Y"</span></div><div class="line">time-codeset=<span class="string">"UTF-8"</span></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -109,6 +108,8 @@
       <a data-url="https://renhuaqiang.github.io/renhq/2017/11/08/shell脚本系统学习第一天/" data-id="cj9ptru3c0000b0aacodqcorg" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/shell编程/">shell编程</a></li></ul>
+
     </footer>
   </div>
   
@@ -211,9 +212,23 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/renhq/tags/shell编程/">shell编程</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/renhq/tags/shell编程/" style="font-size: 10px;">shell编程</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
