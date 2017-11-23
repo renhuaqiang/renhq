@@ -69,6 +69,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-shell脚本系统学习第二天" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/renhq/2017/11/23/shell脚本系统学习第二天/" class="article-date">
+  <time datetime="2017-11-23T00:01:26.000Z" itemprop="datePublished">2017-11-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/renhq/2017/11/23/shell脚本系统学习第二天/">shell脚本系统学习第二天</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="文本匹配：grep-egrep-fgrep"><a href="#文本匹配：grep-egrep-fgrep" class="headerlink" title="文本匹配：grep,egrep,fgrep"></a>文本匹配：grep,egrep,fgrep</h2><p>1、<br>2、</p>
+<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><p>1、？，+，*</p>
+<h2 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h2><p>1、sed [-n] -e ‘editing command’ …………. [file ……]<br>2、sed [-n] -f script-file …………. [file ……]<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find /flume/rhq -<span class="built_in">type</span> d -<span class="built_in">print</span> | sed <span class="string">'s;/flume/rhq;/flume/rhqtest;'</span> | sed <span class="string">'s/^/mkdir /'</span> | sh -x</div></pre></td></tr></table></figure></p>
+<p>3、sed 命令后面设置g，表示匹配到的全局替换，带数字表示匹配的第n个才会替换。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[root@slave1 rhq]<span class="comment"># echo RHQ is a boy, RHQ not a girl &gt; rhq.txt</span></div><div class="line">[root@slave1 rhq]<span class="comment"># sed 's/RHQ/rhq/' rhq.txt</span></div><div class="line">rhq is a boy, RHQ not a girl</div><div class="line">[root@slave1 rhq]<span class="comment"># echo RHQ is a boy, RHQ not a girl &gt; rhq.txt</span></div><div class="line">[root@slave1 rhq]<span class="comment"># sed 's/RHQ/rhq/g' &lt;rhq.txt</span></div><div class="line">rhq is a boy, rhq not a girl</div><div class="line">[root@slave1 rhq]<span class="comment"># echo RHQ is a boy, RHQ not a girl &gt; rhq.txt</span></div><div class="line">[root@slave1 rhq]<span class="comment"># sed 's/RHQ/rhq/2' rhq.txt</span></div><div class="line">RHQ is a boy, rhq not a girl</div><div class="line">[root@slave1 rhq]<span class="comment">#</span></div></pre></td></tr></table></figure></p>
+<p>4、命令放在脚本中来执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">[root@slave1 rhq]<span class="comment"># cat rhq.txt</span></div><div class="line">RHQ is a boy, RHQ not a girl</div><div class="line">[root@slave1 rhq]<span class="comment"># cat rhq.sed</span></div><div class="line">s/RHQ/rhq/1</div><div class="line">s/boy/man/</div><div class="line">s/girl/woman/g</div><div class="line">[root@slave1 rhq]<span class="comment"># sed -f rhq.sed rhq.txt</span></div><div class="line">rhq is a man, RHQ not a woman</div><div class="line">[root@slave1 rhq]<span class="comment">#</span></div></pre></td></tr></table></figure></p>
+<p>5、sed 会读取文件中的每一行到模式空间中即内存某个空间，然后将每一行执行文件中的编辑命令，最后输出模式空间中的最后内容。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[root@slave1 rhq]<span class="comment"># cat rhq.txt</span></div><div class="line">RHQ is a boy, RHQ not a girl</div><div class="line">LYN is a girl, LYN not a boy</div><div class="line">[root@slave1 rhq]<span class="comment"># cat rhq.sed</span></div><div class="line">s/RHQ/rhq/1</div><div class="line">s/boy/man/</div><div class="line">s/girl/woman/g</div><div class="line">[root@slave1 rhq]<span class="comment"># sed -f rhq.sed rhq.txt</span></div><div class="line">rhq is a man, RHQ not a woman</div><div class="line">LYN is a woman, LYN not a man</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/23/shell脚本系统学习第二天/" data-id="cjabptqry000414aaspkzi675" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/shell/">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-20171120日记-随想录" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/renhq/2017/11/20/20171120日记-随想录/" class="article-date">
@@ -99,7 +143,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/20/20171120日记-随想录/" data-id="cja8bvm9n000180aa1u5nu8p0" class="article-share-link">Share</a>
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/20/20171120日记-随想录/" data-id="cjabptqte000a14aa9qp3oj3l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/日记/">日记</a></li></ul>
@@ -150,10 +194,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/08/shell脚本系统学习第一天/" data-id="cja8bvmac000680aa0hv5dpww" class="article-share-link">Share</a>
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/08/shell脚本系统学习第一天/" data-id="cjabptqrr000214aa40bo2149" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/shell编程/">shell编程</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/shell/">shell</a></li></ul>
 
     </footer>
   </div>
@@ -185,15 +229,14 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="终于有博客了。啦啦啦"><a href="#终于有博客了。啦啦啦" class="headerlink" title="终于有博客了。啦啦啦"></a>终于有博客了。啦啦啦</h2><p>##标题</p>
-<blockquote>
+<h2 id="终于有博客了。啦啦啦"><a href="#终于有博客了。啦啦啦" class="headerlink" title="终于有博客了。啦啦啦"></a>终于有博客了。啦啦啦</h2><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><blockquote>
 <p>1、坚持<br>2、实践<br>3、总结</p>
 </blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/06/我的博客/" data-id="cja8bvma8000580aaviqe4bt7" class="article-share-link">Share</a>
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/06/我的博客/" data-id="cjabptqsd000614aa4cwdktyr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -238,7 +281,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/05/hello-world/" data-id="cja8bvm9w000380aa6zwfjqh5" class="article-share-link">Share</a>
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/05/hello-world/" data-id="cjabptqrf000014aa9ptz5f21" class="article-share-link">Share</a>
       
       
     </footer>
@@ -260,7 +303,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/renhq/tags/shell编程/">shell编程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/renhq/tags/日记/">日记</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/renhq/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/renhq/tags/日记/">日记</a></li></ul>
     </div>
   </div>
 
@@ -270,7 +313,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/renhq/tags/shell编程/" style="font-size: 10px;">shell编程</a> <a href="/renhq/tags/日记/" style="font-size: 10px;">日记</a>
+      <a href="/renhq/tags/shell/" style="font-size: 20px;">shell</a> <a href="/renhq/tags/日记/" style="font-size: 10px;">日记</a>
     </div>
   </div>
 
@@ -290,6 +333,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/renhq/2017/11/23/shell脚本系统学习第二天/">shell脚本系统学习第二天</a>
+          </li>
         
           <li>
             <a href="/renhq/2017/11/20/20171120日记-随想录/">20171120日记--随想录</a>
