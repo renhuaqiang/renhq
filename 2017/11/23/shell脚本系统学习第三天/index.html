@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档: 2017/11 | peopleflowerstrong</title>
+  <title>shell脚本系统学习第三天 | peopleflowerstrong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="从零开始">
-<meta property="og:type" content="website">
-<meta property="og:title" content="peopleflowerstrong">
-<meta property="og:url" content="https://renhuaqiang.github.io/renhq/archives/2017/11/index.html">
+  <meta name="description" content="[TOC] 使用 awk 将数据写到CSV文件中（CSV格式可以使用excel打开，默认分隔符为逗号“,”） 1cat sort.csv | awk &apos;BEGIN&amp;#123;OFS=&quot;,&quot;;print &quot;个数&quot;,&quot;手机号&quot;&amp;#125;&amp;#123;print $1,$2&amp;#125;&apos; &amp;gt;result.csv">
+<meta name="keywords" content="shell">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell脚本系统学习第三天">
+<meta property="og:url" content="https://renhuaqiang.github.io/renhq/2017/11/23/shell脚本系统学习第三天/index.html">
 <meta property="og:site_name" content="peopleflowerstrong">
-<meta property="og:description" content="从零开始">
+<meta property="og:description" content="[TOC] 使用 awk 将数据写到CSV文件中（CSV格式可以使用excel打开，默认分隔符为逗号“,”） 1cat sort.csv | awk &apos;BEGIN&amp;#123;OFS=&quot;,&quot;;print &quot;个数&quot;,&quot;手机号&quot;&amp;#125;&amp;#123;print $1,$2&amp;#125;&apos; &amp;gt;result.csv">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-23T00:44:03.510Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="peopleflowerstrong">
-<meta name="twitter:description" content="从零开始">
+<meta name="twitter:title" content="shell脚本系统学习第三天">
+<meta name="twitter:description" content="[TOC] 使用 awk 将数据写到CSV文件中（CSV格式可以使用excel打开，默认分隔符为逗号“,”） 1cat sort.csv | awk &apos;BEGIN&amp;#123;OFS=&quot;,&quot;;print &quot;个数&quot;,&quot;手机号&quot;&amp;#125;&amp;#123;print $1,$2&amp;#125;&apos; &amp;gt;result.csv">
   
     <link rel="alternate" href="/atom.xml" title="peopleflowerstrong" type="application/atom+xml">
   
@@ -67,134 +69,54 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/renhq/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/renhq/2017/11/23/shell脚本系统学习第三天/" class="archive-article-date">
-  <time datetime="2017-11-23T00:31:25.000Z" itemprop="datePublished">11月 23</time>
+        <section id="main"><article id="post-shell脚本系统学习第三天" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/renhq/2017/11/23/shell脚本系统学习第三天/" class="article-date">
+  <time datetime="2017-11-23T00:31:25.000Z" itemprop="datePublished">2017-11-23</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/renhq/2017/11/23/shell脚本系统学习第三天/">shell脚本系统学习第三天</a>
+    <h1 class="article-title" itemprop="name">
+      shell脚本系统学习第三天
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/renhq/2017/11/23/shell脚本系统学习第二天/" class="archive-article-date">
-  <time datetime="2017-11-23T00:01:26.000Z" itemprop="datePublished">11月 23</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/renhq/2017/11/23/shell脚本系统学习第二天/">shell脚本系统学习第二天</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/renhq/2017/11/20/20171120日记-随想录/" class="archive-article-date">
-  <time datetime="2017-11-20T14:58:04.000Z" itemprop="datePublished">11月 20</time>
-</a>
+        <p> [TOC]</p>
+<h2 id="使用-awk-将数据写到CSV文件中（CSV格式可以使用excel打开，默认分隔符为逗号“-”）"><a href="#使用-awk-将数据写到CSV文件中（CSV格式可以使用excel打开，默认分隔符为逗号“-”）" class="headerlink" title="使用 awk 将数据写到CSV文件中（CSV格式可以使用excel打开，默认分隔符为逗号“,”）"></a>使用 awk 将数据写到CSV文件中（CSV格式可以使用excel打开，默认分隔符为逗号“,”）</h2> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat sort.csv | awk <span class="string">'BEGIN&#123;OFS=",";print "个数","手机号"&#125;&#123;print $1,$2&#125;'</span> &gt;result.csv</div></pre></td></tr></table></figure>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/renhq/2017/11/20/20171120日记-随想录/">20171120日记--随想录</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/renhq/2017/11/08/shell脚本系统学习第一天/" class="archive-article-date">
-  <time datetime="2017-11-07T16:23:03.000Z" itemprop="datePublished">11月 8</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/23/shell脚本系统学习第三天/" data-id="cjabr9k9i0005ggaau7hj7ko5" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/renhq/2017/11/08/shell脚本系统学习第一天/">shell脚本系统学习第一天</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/renhq/2017/11/06/我的博客/" class="archive-article-date">
-  <time datetime="2017-11-06T14:48:29.000Z" itemprop="datePublished">11月 6</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/renhq/2017/11/06/我的博客/">我的博客</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/shell/">shell</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/renhq/2017/11/05/hello-world/" class="archive-article-date">
-  <time datetime="2017-11-05T01:11:04.627Z" itemprop="datePublished">11月 5</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/renhq/2017/11/05/hello-world/">Hello World</a>
-    </h1>
   
+    <a href="/renhq/2017/11/23/shell脚本系统学习第二天/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">shell脚本系统学习第二天</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
