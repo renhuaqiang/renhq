@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 日记 | peopleflowerstrong</title>
+  <title>shell脚本系统学习第四天 | peopleflowerstrong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="从零开始">
-<meta property="og:type" content="website">
-<meta property="og:title" content="peopleflowerstrong">
-<meta property="og:url" content="https://renhuaqiang.github.io/renhq/tags/日记/index.html">
+  <meta name="description" content="xargs 、sh -x 在管道中使用将输出的文本作为shell命令执行sh -x 能将输出的文本转化为shell命令执行1find /flume/rhq -type d -print | sed &amp;apos;s;/flume/rhq;/flume/rhqtest;&amp;apos; | sed &amp;apos;s/^/mkdir /&amp;apos; | sh -x xargs 将多个参数拆分 给后面的命令执行">
+<meta name="keywords" content="shell">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell脚本系统学习第四天">
+<meta property="og:url" content="https://renhuaqiang.github.io/renhq/2017/11/25/shell脚本系统学习第四天/index.html">
 <meta property="og:site_name" content="peopleflowerstrong">
-<meta property="og:description" content="从零开始">
+<meta property="og:description" content="xargs 、sh -x 在管道中使用将输出的文本作为shell命令执行sh -x 能将输出的文本转化为shell命令执行1find /flume/rhq -type d -print | sed &amp;apos;s;/flume/rhq;/flume/rhqtest;&amp;apos; | sed &amp;apos;s/^/mkdir /&amp;apos; | sh -x xargs 将多个参数拆分 给后面的命令执行">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-02T13:15:23.993Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="peopleflowerstrong">
-<meta name="twitter:description" content="从零开始">
+<meta name="twitter:title" content="shell脚本系统学习第四天">
+<meta name="twitter:description" content="xargs 、sh -x 在管道中使用将输出的文本作为shell命令执行sh -x 能将输出的文本转化为shell命令执行1find /flume/rhq -type d -print | sed &amp;apos;s;/flume/rhq;/flume/rhqtest;&amp;apos; | sed &amp;apos;s/^/mkdir /&amp;apos; | sh -x xargs 将多个参数拆分 给后面的命令执行">
   
     <link rel="alternate" href="/atom.xml" title="peopleflowerstrong" type="application/atom+xml">
   
@@ -67,39 +69,54 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/renhq/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/renhq/2017/11/20/20171120日记-随想录/" class="archive-article-date">
-  <time datetime="2017-11-20T14:58:04.000Z" itemprop="datePublished">11月 20</time>
+        <section id="main"><article id="post-shell脚本系统学习第四天" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/renhq/2017/11/25/shell脚本系统学习第四天/" class="article-date">
+  <time datetime="2017-11-25T15:12:19.000Z" itemprop="datePublished">2017-11-25</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/renhq/2017/11/20/20171120日记-随想录/">20171120日记--随想录</a>
+    <h1 class="article-title" itemprop="name">
+      shell脚本系统学习第四天
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="xargs-、sh-x-在管道中使用将输出的文本作为shell命令执行"><a href="#xargs-、sh-x-在管道中使用将输出的文本作为shell命令执行" class="headerlink" title="xargs 、sh -x 在管道中使用将输出的文本作为shell命令执行"></a>xargs 、sh -x 在管道中使用将输出的文本作为shell命令执行</h1><h2 id="sh-x-能将输出的文本转化为shell命令执行"><a href="#sh-x-能将输出的文本转化为shell命令执行" class="headerlink" title="sh -x 能将输出的文本转化为shell命令执行"></a>sh -x 能将输出的文本转化为shell命令执行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find /flume/rhq -type d -print | sed &apos;s;/flume/rhq;/flume/rhqtest;&apos; | sed &apos;s/^/mkdir /&apos; | sh -x</div></pre></td></tr></table></figure>
+<h2 id="xargs-将多个参数拆分-给后面的命令执行"><a href="#xargs-将多个参数拆分-给后面的命令执行" class="headerlink" title="xargs 将多个参数拆分 给后面的命令执行"></a>xargs 将多个参数拆分 给后面的命令执行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ps -ef | grep UserCheckPoint | grep -v grep | awk &apos;&#123;print $2&#125;&apos; | xargs kill -9</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/25/shell脚本系统学习第四天/" data-id="cjapd2r720001roaahdikwiv3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/shell/">shell</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/renhq/2017/11/23/shell脚本系统学习第三天/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">shell脚本系统学习第三天</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
