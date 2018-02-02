@@ -69,6 +69,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-shell合并文件，并提取括号中逗号分隔的内容" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/renhq/2018/02/02/shell合并文件，并提取括号中逗号分隔的内容/" class="article-date">
+  <time datetime="2018-02-02T03:07:04.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/renhq/2018/02/02/shell合并文件，并提取括号中逗号分隔的内容/">shell合并文件，并提取括号中逗号分隔的内容</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"></div><div class="line">function unionFileByFilePath()&#123;</div><div class="line">cd $1</div><div class="line">for file in `ls ./`</div><div class="line">do</div><div class="line">  cat $file &gt;&gt;./temp</div><div class="line">done</div><div class="line">cat ./temp | sed &apos;s/(\(.*\),.*)/\1/&apos; &gt;&gt; allData.txt</div><div class="line">rm ./temp</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">unionFileByFilePath /home/spark/rhq/mytest/compareData/actionRisk_5;</div><div class="line">unionFileByFilePath /home/spark/rhq/mytest/compareData/actionRisk_10;</div><div class="line">unionFileByFilePath /home/spark/rhq/mytest/compareData/actionRisk_20;</div><div class="line">unionFileByFilePath /home/spark/rhq/mytest/compareData/actionRisk_50;</div><div class="line">unionFileByFilePath /home/spark/rhq/mytest/compareData/actionRisk_100;</div><div class="line">unionFileByFilePath /home/spark/rhq/mytest/compareData/actionRisk_200;</div><div class="line">unionFileByFilePath /home/spark/rhq/mytest/compareData/actionRisk_rt200;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://renhuaqiang.github.io/renhq/2018/02/02/shell合并文件，并提取括号中逗号分隔的内容/" data-id="cjd5cq5p70001owaad30x9ms9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/shell/">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-20171215日记--自我总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/renhq/2017/12/15/20171215日记--自我总结/" class="article-date">
@@ -97,7 +136,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://renhuaqiang.github.io/renhq/2017/12/15/20171215日记--自我总结/" data-id="cjb80u3ok00007gaajbigd3jb" class="article-share-link">Share</a>
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/12/15/20171215日记--自我总结/" data-id="cjd5cq5qc0008owaaybi9b2f9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/日记/">日记</a></li></ul>
@@ -137,7 +176,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://renhuaqiang.github.io/renhq/2017/12/05/spring-cloud-config配置服务，中文配置乱码/" data-id="cjatem7w1000am4aa66hlq7w3" class="article-share-link">Share</a>
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/12/05/spring-cloud-config配置服务，中文配置乱码/" data-id="cjd5cq5r6000gowaasyoz05a7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/spring-cloud/">spring cloud</a></li></ul>
@@ -178,7 +217,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://renhuaqiang.github.io/renhq/2017/12/02/高效的秘密/" data-id="cjatem7we000dm4aao2at4bih" class="article-share-link">Share</a>
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/12/02/高效的秘密/" data-id="cjd5cq5s2000nowaaaka8tuhs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/读书笔记/">读书笔记</a></li></ul>
@@ -217,7 +256,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/25/shell脚本系统学习第四天/" data-id="cjatem7wg000fm4aayrn2r870" class="article-share-link">Share</a>
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/25/shell脚本系统学习第四天/" data-id="cjd5cq5qu000bowaa2oi1g4rs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/shell/">shell</a></li></ul>
@@ -256,7 +295,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/23/shell脚本系统学习第三天/" data-id="cjatem7vm0005m4aag5lh3auj" class="article-share-link">Share</a>
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/23/shell脚本系统学习第三天/" data-id="cjd5cq5pu0006owaav05jsf9t" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/shell/">shell</a></li></ul>
@@ -300,7 +339,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/23/shell脚本系统学习第二天/" data-id="cjatem7vx0007m4aavxhk658d" class="article-share-link">Share</a>
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/23/shell脚本系统学习第二天/" data-id="cjd5cq5rc000kowaatml410f9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/shell/">shell</a></li></ul>
@@ -342,7 +381,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/20/20171120日记-随想录/" data-id="cjatem7ur0000m4aaulwa1ba6" class="article-share-link">Share</a>
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/20/20171120日记-随想录/" data-id="cjd5cq5oz0000owaahyivs6ix" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/日记/">日记</a></li></ul>
@@ -393,7 +432,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/08/shell脚本系统学习第一天/" data-id="cjatem7vq0006m4aahsux1klo" class="article-share-link">Share</a>
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/08/shell脚本系统学习第一天/" data-id="cjd5cq5r3000fowaam7crkkgz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/renhq/tags/shell/">shell</a></li></ul>
@@ -435,52 +474,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/06/我的博客/" data-id="cjatem7w3000bm4aaa1vj82qs" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/renhq/2017/11/05/hello-world/" class="article-date">
-  <time datetime="2017-11-05T01:11:04.627Z" itemprop="datePublished">2017-11-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/renhq/2017/11/05/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/05/hello-world/" data-id="cjatem7va0002m4aajl2gj7fh" class="article-share-link">Share</a>
+      <a data-url="https://renhuaqiang.github.io/renhq/2017/11/06/我的博客/" data-id="cjd5cq5r8000iowaaz4g7xlou" class="article-share-link">Share</a>
       
       
     </footer>
@@ -491,6 +485,10 @@
 
   
 
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/renhq/page/2/">2</a><a class="extend next" rel="next" href="/renhq/page/2/">__('next') &raquo;</a>
+  </nav>
 </section>
         
           <aside id="sidebar">
@@ -521,7 +519,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/renhq/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/renhq/archives/2017/11/">十一月 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/renhq/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/renhq/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/renhq/archives/2017/11/">十一月 2017</a></li></ul>
     </div>
   </div>
 
@@ -532,6 +530,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/renhq/2018/02/02/shell合并文件，并提取括号中逗号分隔的内容/">shell合并文件，并提取括号中逗号分隔的内容</a>
+          </li>
         
           <li>
             <a href="/renhq/2017/12/15/20171215日记--自我总结/">20171215日记-自我总结</a>
@@ -549,10 +551,6 @@
             <a href="/renhq/2017/11/25/shell脚本系统学习第四天/">shell脚本系统学习第四天</a>
           </li>
         
-          <li>
-            <a href="/renhq/2017/11/23/shell脚本系统学习第三天/">shell脚本系统学习第三天</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -565,7 +563,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 renhq<br>
+      &copy; 2018 renhq<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
